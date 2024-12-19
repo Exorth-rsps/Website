@@ -1,19 +1,3 @@
-
-
-
-
-
-/*
-     FILE ARCHIVED ON 17:31:18 Mar 16, 2009 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 14:01:43 Feb 22, 2021.
-     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
-
-     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
-     SECTION 108(a)(3)).
-*/
-
-
-
 /* Global overrides */
 
 html {
@@ -45,7 +29,6 @@ input, textarea, select {
 body {
  padding: 0;
  margin: 0;
- 
  background: #050400 url(../img/main/layout/bg.jpg) repeat-y center top;
  text-align: center;
  font-family: Arial, Helvetica, FreeSans, sans-serif;
@@ -57,17 +40,13 @@ body {
 
 #scroll {
  height: 1%;
- 
  background: transparent url(../img/main/layout/bg_scroll.jpg) repeat-y center 83px;
- 
 }
 
 #head {
  font-size: 0;
  padding-top: 12px;
- 
  background: transparent url(../img/main/layout/bg_header.jpg) no-repeat center top;
- 
 }
 
 #headBoard,#headOrangeTop,#headOrangeBottom,#headImage,#headAdvert,#menubox,.navigation,.navigation2,.navigation3, #headShort {
@@ -176,16 +155,6 @@ body {
  height: 27px;
  margin-top: 4px;
 }
-
-/* ================================================================
-This copyright notice must be untouched at all times.
-
-The original version of this stylesheet and the associated (x)html
-is available at http://www.cssplay.co.uk/menus/basic_dd.html
-Copyright (c) 2005-2007 Stu Nicholls. All rights reserved.
-This stylesheet and the assocaited (x)html may be modified in any
-way to fit your requirements.
-=================================================================== */
 
 /* remove the bullets, padding and margins from the lists */
 #menubox ul{
@@ -319,23 +288,15 @@ way to fit your requirements.
  background-position: 1px -48px;
 }
 
-
 #menus iframe { position: absolute; left: -9999px; top: -9999px; margin-left: 0; }
 
 #menus a:hover iframe {left: -1px; top: 28px; width: 184px; }
 
+#menus a#guide:hover iframe { height: 110px; }
 
-
- #menus a#guide:hover iframe { height: 110px; }
-
-
-
-
- #menus a#community:hover iframe { height: 132px; }
-
+#menus a#community:hover iframe { height: 132px; }
 
 #menus a#help:hover iframe { height: 132px; }
-
 
 /* xMenu */
 
@@ -353,21 +314,15 @@ way to fit your requirements.
 /* Sections */
 
 .sectionHeader {
- 
  background: #bd9c5a url(../img/main/layout/section_header_bg.png) top repeat-x;
- 
 }
 
 .sectionHeader .left {
- 
  background: url(../img/main/layout/section_header_left.png) left no-repeat;
-  
 }
 
 .sectionHeader .right {
- 
  background: url(../img/main/layout/section_header_right.png) right no-repeat;
- 
 }
 
 .sectionHeader .plaque, .sectionHeader .plaque_medium, .sectionHeader .plaque_large {
@@ -382,21 +337,15 @@ way to fit your requirements.
 }
 
 .sectionHeader .plaque_medium {
- 
  background: url(../img/main/layout/section_header_plaque_medium.png) center top no-repeat;
- 
 }
 
 .sectionHeader .plaque_large {
- 
  background: url(../img/main/layout/section_header_plaque_large.png) center top no-repeat;
- 
 }
 
 .sectionHeader .plaque {
- 
  background: url(../img/main/layout/section_header_plaque.png) center top no-repeat;
- 
 }
 
 .sectionHeader img {
@@ -458,10 +407,7 @@ a {
  margin: auto;
  padding-top: 5px;
  text-align: center;
- 
- 
  background: transparent url(../img/main/layout/bg_footer-2.png) center bottom no-repeat;
- 
 }
 
 .contain {
@@ -470,10 +416,7 @@ a {
  margin-left: auto;
  margin-right: auto;
  position: relative;
- 
- 
  /* background: #bf9f5e url(../img/main/layout/bg_footer-1.jpg) center bottom no-repeat; */
- 
 }
 
 #footer a {
@@ -487,11 +430,7 @@ a {
 .footerdesc {
  font-size:11px;
  margin: auto;
- 
-  
-   padding-top: 21px;
-  
- 
+ padding-top: 21px;
 }
 
 .jagexlink {
@@ -612,7 +551,6 @@ a {
 .brown_box_stack {
  margin-bottom: 5px;
 }
-
 
 /* xBrown article */
 
