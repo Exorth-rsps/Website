@@ -49,7 +49,7 @@ $token = $_GET['token'] ?? '';
 </head>
 <body>
     <div class="reset-card shadow">
-    <img src="https://logos-world.net/wp-content/uploads/2021/02/RuneScape-Logo-2011-2013-700x394.png" alt="Logo" class="img-fluid mb-4">
+    <img src="../img/Exorth-logo.png" alt="Logo" class="img-fluid mb-4">
         <h1 class="text-center mb-4">Reset Password</h1>
         <?php if ($error): ?>
             <div class="alert alert-danger"><?= htmlspecialchars($error) ?></div>

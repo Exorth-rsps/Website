@@ -18,9 +18,9 @@ function stripImages($html) {
  <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
   <meta http-equiv="Content-Language" content="en, English"> 
-  <meta name="keywords" content="Runescape, Jagex, free, games, online, multiplayer, magic, spells, java, MMORPG, MPORPG, gaming"> 
-  <meta name="description" content="RuneScape is a massive 3d multiplayer adventure, with monsters to kill, quests to complete, and treasure to win. You control your own character who will improve and become more powerful the more you play."> 
-  <title>RuneScape - the massive online adventure game by Jagex Ltd.</title> 
+  <!-- <meta name="keywords" content="Runescape, Jagex, free, games, online, multiplayer, magic, spells, java, MMORPG, MPORPG, gaming"> 
+  <meta name="description" content="RuneScape is a massive 3d multiplayer adventure, with monsters to kill, quests to complete, and treasure to win. You control your own character who will improve and become more powerful the more you play.">  -->
+  <title>Exorth RSPS</title> 
   <style type="text/css">/*\*/@import url(css/global.css);/**/</style> 
   <style type="text/css">/*\*/@import url(css/home.css);/**/</style> 
   <script type="text/javascript">
@@ -33,11 +33,11 @@ function stripImages($html) {
   <div id="scroll"> 
    <div id="head"> 
     <div id="headOrangeTop"></div> 
-    <img src="img/main/layout/head_image_phoenix.jpg" alt="RuneScape"> 
+    <img src="img/banner.png" alt="Exorth"> 
     <div id="headImage">
      <a href="index.php" id="logo_select"></a> 
      <div id="player_no">
-      The server is currently offline and in development.
+      Happy X-mass and a happy new year!
      </div> 
     </div> 
     <div id="headOrangeBottom"></div> 

@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
     <div class="login-card shadow">
-        <img src="https://logos-world.net/wp-content/uploads/2021/02/RuneScape-Logo-2011-2013-700x394.png" alt="Logo" class="img-fluid mb-4">
+        <img src="https://http://exorth.net/img/Exorth-logo.png" alt="Logo" class="img-fluid mb-4">
         <h1 class="text-center mb-4">Login</h1>
         <?php if ($error): ?>
             <div class="alert alert-danger"><?= htmlspecialchars($error) ?></div>

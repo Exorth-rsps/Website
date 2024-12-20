@@ -27,7 +27,7 @@ $base_path = dirname($_SERVER['SCRIPT_NAME']);
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="<?php echo $base_path . '../../index.php'; ?>">
-                <img src="https://logos-world.net/wp-content/uploads/2021/02/RuneScape-Logo-2011-2013-700x394.png" alt="Dashboard Logo">
+                <img src="http://exorth.net/img/Exorth-logo.png" alt="Dashboard Logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
