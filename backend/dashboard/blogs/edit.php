@@ -1,6 +1,7 @@
 <?php
 require '../../includes/auth.php';
 require '../../includes/db.php';
+require '../../includes/discord_webhook.php'; // Voeg de webhook-functionaliteit toe
 include '../../templates/header.php';
 
 check_role(['admin', 'author']); // Accessible only for admins and authors
@@ -22,6 +23,7 @@ if ($result->num_rows === 0) {
 }
 
 $blog = $result->fetch_assoc();
+$old_status = $blog['status']; // Bewaar de oude status om statuswijziging te controleren
 
 // Handle form submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -35,6 +37,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($stmt->execute()) {
             $success = "Blog post updated successfully.";
+
+            // Controleer of de status naar 'published' is gewijzigd
+            if ($status === 'published' && $old_status !== 'published') {
+                $blog_url = "https://yourwebsite.com/blog/view.php?id=$blog_id";
+                
+                // Verstuur bericht naar Discord
+                sendToDiscord($title, $blog_url);
+            }
         } else {
             $error = "Failed to update the blog post. Please try again.";
         }

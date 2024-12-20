@@ -1,6 +1,7 @@
 <?php
 require '../../includes/auth.php';
 require '../../includes/db.php';
+require '../../includes/discord_webhook.php'; // Voeg de webhook-functionaliteit toe
 include '../../templates/header.php';
 
 check_role(['admin', 'author']); // Accessible only for admins and authors
@@ -20,6 +21,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($stmt->execute()) {
             $success = "Blog post created successfully.";
+            
+            // Controleer of de blog is gepubliceerd
+            if ($status === 'published') {
+                $blog_id = $conn->insert_id;
+                $blog_url = "https://exorth.net/view.php?id=$blog_id";
+                
+                // Verstuur bericht naar Discord
+                sendToDiscord($title, $blog_url);
+            }
         } else {
             $error = "Failed to save the blog post. Please try again.";
         }
