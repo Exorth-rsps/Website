@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             // Controleer of de status naar 'published' is gewijzigd
             if ($status === 'published' && $old_status !== 'published') {
-                $blog_url = "https://yourwebsite.com/blog/view.php?id=$blog_id";
+                $blog_url = "https://exorth.net/view.php?id=$blog_id";
                 
                 // Verstuur bericht naar Discord
                 sendToDiscord($title, $blog_url);
