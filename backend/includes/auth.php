@@ -7,7 +7,7 @@ session_start(); // Start de sessie
  */
 function check_logged_in() {
     if (!isset($_SESSION['user_id'])) {
-        header("Location: /login.php");
+        header("Location: /backend/login.php");
         exit;
     }
 }

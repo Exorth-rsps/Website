@@ -3,9 +3,9 @@ require '../includes/auth.php';
 require '../includes/db.php';
 include '../templates/header.php';
 
-check_logged_in(); // Alleen toegankelijk voor ingelogde gebruikers
+check_logged_in(); // Accessible only for logged-in users
 
-// Variabelen voor foutmeldingen of succes
+// Variables for error or success messages
 $error = '';
 $success = '';
 
@@ -14,27 +14,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $user_id = $_SESSION['user_id'];
 
     if (isset($_POST['display_name'])) {
-        // Update schermnaam
+        // Update display name
         $display_name = trim($_POST['display_name']);
         if (!empty($display_name)) {
             $stmt = $conn->prepare("UPDATE users SET display_name = ? WHERE id = ?");
             $stmt->bind_param("si", $display_name, $user_id);
             if ($stmt->execute()) {
-                $success = "Schermnaam succesvol bijgewerkt.";
+                $success = "Display name successfully updated.";
             } else {
-                $error = "Fout bij het bijwerken van je schermnaam.";
+                $error = "Error updating your display name.";
             }
         } else {
-            $error = "Schermnaam mag niet leeg zijn.";
+            $error = "Display name cannot be empty.";
         }
     }
 
     if (isset($_POST['current_password'], $_POST['new_password'])) {
-        // Wijzig wachtwoord
+        // Change password
         $current_password = $_POST['current_password'];
         $new_password = $_POST['new_password'];
 
-        // Controleer huidig wachtwoord
+        // Verify current password
         $stmt = $conn->prepare("SELECT password FROM users WHERE id = ?");
         $stmt->bind_param("i", $user_id);
         $stmt->execute();
@@ -42,22 +42,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $user = $result->fetch_assoc();
 
         if (password_verify($current_password, $user['password'])) {
-            // Update wachtwoord
+            // Update password
             $new_password_hash = password_hash($new_password, PASSWORD_DEFAULT);
             $stmt = $conn->prepare("UPDATE users SET password = ? WHERE id = ?");
             $stmt->bind_param("si", $new_password_hash, $user_id);
             if ($stmt->execute()) {
-                $success = "Wachtwoord succesvol bijgewerkt.";
+                $success = "Password successfully updated.";
             } else {
-                $error = "Fout bij het wijzigen van je wachtwoord.";
+                $error = "Error updating your password.";
             }
         } else {
-            $error = "Huidig wachtwoord is onjuist.";
+            $error = "Current password is incorrect.";
         }
     }
 }
 
-// Haal huidige schermnaam op
+// Retrieve the current display name
 $stmt = $conn->prepare("SELECT display_name FROM users WHERE id = ?");
 $stmt->bind_param("i", $_SESSION['user_id']);
 $stmt->execute();
@@ -72,11 +72,11 @@ $current_display_name = $user['display_name'] ?? '';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>Instellingen</title>
+    <title>Settings</title>
 </head>
 <body>
     <div class="container mt-5">
-        <h1>Instellingen</h1>
+        <h1>Settings</h1>
         <?php if ($error): ?>
             <div class="alert alert-danger"><?= htmlspecialchars($error) ?></div>
         <?php endif; ?>
@@ -84,28 +84,28 @@ $current_display_name = $user['display_name'] ?? '';
             <div class="alert alert-success"><?= htmlspecialchars($success) ?></div>
         <?php endif; ?>
 
-        <!-- Formulier voor schermnaam -->
+        <!-- Form to update display name -->
         <form method="post" class="mb-4">
-            <h3>Schermnaam aanpassen</h3>
+            <h3>Update Display Name</h3>
             <div class="mb-3">
-                <label for="display_name" class="form-label">Schermnaam</label>
+                <label for="display_name" class="form-label">Display Name</label>
                 <input type="text" class="form-control" id="display_name" name="display_name" value="<?= htmlspecialchars($current_display_name) ?>" required>
             </div>
-            <button type="submit" class="btn btn-primary">Opslaan</button>
+            <button type="submit" class="btn btn-primary">Save</button>
         </form>
 
-        <!-- Formulier voor wachtwoord wijzigen -->
+        <!-- Form to change password -->
         <form method="post">
-            <h3>Wachtwoord wijzigen</h3>
+            <h3>Change Password</h3>
             <div class="mb-3">
-                <label for="current_password" class="form-label">Huidig Wachtwoord</label>
+                <label for="current_password" class="form-label">Current Password</label>
                 <input type="password" class="form-control" id="current_password" name="current_password" required>
             </div>
             <div class="mb-3">
-                <label for="new_password" class="form-label">Nieuw Wachtwoord</label>
+                <label for="new_password" class="form-label">New Password</label>
                 <input type="password" class="form-control" id="new_password" name="new_password" required>
             </div>
-            <button type="submit" class="btn btn-primary">Wachtwoord Wijzigen</button>
+            <button type="submit" class="btn btn-primary">Change Password</button>
         </form>
     </div>
 
