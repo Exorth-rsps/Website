@@ -39,12 +39,12 @@ $blog = $result->fetch_assoc();
   <div id="scroll"> 
    <div id="head"> 
     <div id="headOrangeTop"></div> 
-    <img src="img/banner.png" alt="Exorth"> 
+    <img src="img/banner.jpg" alt="Exorth"> 
     <div id="headImage">
      <a href="index.php" id="logo_select"></a> 
-     <div id="player_no">
+     <!-- <div id="player_no">
       Happy X-mass and a happy new year!
-     </div> 
+     </div>  -->
     </div> 
     <div id="headOrangeBottom"></div> 
     <div id="menubox"> 
