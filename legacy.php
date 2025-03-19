@@ -1,28 +1,3 @@
-<?php
-require 'backend/includes/db.php'; // Zorg ervoor dat de databaseverbinding correct is ingesteld
-
-// Haal het blog-ID uit de URL
-$blog_id = isset($_GET['id']) ? intval($_GET['id']) : 0;
-
-// Controleer of het blog-ID geldig is en haal de bloggegevens op
-$stmt = $conn->prepare("
-    SELECT blogs.title, blogs.content, blogs.created_at, users.display_name 
-    FROM blogs 
-    JOIN users ON blogs.author_id = users.id 
-    WHERE blogs.id = ? AND blogs.status = 'published'
-");
-$stmt->bind_param("i", $blog_id);
-$stmt->execute();
-$result = $stmt->get_result();
-
-// Controleer of de blog bestaat
-if ($result->num_rows === 0) {
-    die("The requested blog post does not exist or is not published.");
-}
-
-$blog = $result->fetch_assoc();
-?>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html> 
  <head>
@@ -30,7 +5,7 @@ $blog = $result->fetch_assoc();
   <meta http-equiv="Content-Language" content="en, English"> 
   <!-- <meta name="keywords" content="Runescape, Jagex, free, games, online, multiplayer, magic, spells, java, MMORPG, MPORPG, gaming"> 
   <meta name="description" content="RuneScape is a massive 3d multiplayer adventure, with monsters to kill, quests to complete, and treasure to win. You control your own character who will improve and become more powerful the more you play.">  -->
-  <title><?= htmlspecialchars($blog['title']) ?> - Exorth RSPS</title> 
+  <title>Legacy - Exorth RSPS</title> 
   <style type="text/css">/*\*/@import url(css/global.css);/**/</style> 
   <style type="text/css">/*\*/@import url(css/home.css);/**/</style> 
  </head> 
@@ -58,7 +33,7 @@ $blog = $result->fetch_assoc();
         <div class="left"> 
          <div class="right"> 
           <div class="plaque_medium">
-            <?= htmlspecialchars($blog['title']) ?>
+            Exorth Legacy Server
           </div> 
          </div> 
         </div> 
@@ -67,14 +42,8 @@ $blog = $result->fetch_assoc();
        <div class="sectionBody first"> 
         <div class="News"> 
          <p>
-            <?= $blog['content'] ?> <!-- HTML wordt correct weergegeven -->
+            Something here
          </p> 
-         <p>
-            <small>
-                Published on: <?= date("d-M-Y", strtotime($blog['created_at'])) ?> 
-                by: <?= htmlspecialchars($blog['display_name']) ?>
-            </small>
-         </p>
         </div> 
        </div>  
       </div> 

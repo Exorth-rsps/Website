@@ -42,10 +42,7 @@ function stripImages($html) {
     </div> 
     <div id="headOrangeBottom"></div> 
     <div id="menubox"> 
-     <ul id="menus"> 
-      <li class="top"><a href="index.php" id="home" class="tl"><span class="ts">Home</span></a></li> 
-      <li class="top"><a id="discord" class="tl" href="https://discord.gg/HgAR7swYYH" target="_blank"><span class="ts">Discord</span></a></li>
-    </ul>
+    <?php include 'menu.php'; ?>
      <br class="clear"> 
     </div> 
    </div> 
