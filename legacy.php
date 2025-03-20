@@ -12,14 +12,14 @@
   display: inline-block;       /* Zorgt voor ‘button’-achtig uiterlijk */
   padding: 10px 20px;          /* Ruimte rondom de tekst */
   text-decoration: none;       /* Onderstreept de link niet meer */
-  color: #fff;                 /* Tekstkleur (wit) */
-  background-color: #007BFF;   /* Blauwe achtergrond */
+  color: #2c2419;                 /* Tekstkleur (wit) */
+  background-color: rgb(212, 174, 97);   /* Blauwe achtergrond */
   border-radius: 4px;          /* Ronde hoekjes */
   margin-right: 10px;          /* Ruimte tussen knoppen */
 }
 
 .btn:hover {
-  background-color: #0056b3;   /* Donkerdere kleur bij hover */
+  background-color:rgb(211, 163, 69);   /* Donkerdere kleur bij hover */
 }
 
 .button-row {
