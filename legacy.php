@@ -70,7 +70,7 @@
               <li>Unfortunately, Exorth Legacy only works on Windows.</li>
             </ul>
             <div class="button-row">
-  <a href="/legacy-download.php" class="btn">Download the client</a>
+  <a href="/legacy-download.php" class="btn" style="color: #2c2419;">>Download the client</a>
   <a href="/legacy-droptable.php" class="btn">View drop tables</a>
   <a href="legacy-guides.php" class="btn">View game guides</a>
 </div>
