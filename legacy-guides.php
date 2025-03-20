@@ -42,7 +42,7 @@
        <div class="sectionBody first"> 
         <div class="News"> 
          <p>
-            Something here
+            <h2>Comming Soon!</h2>
          </p> 
         </div> 
        </div>  
