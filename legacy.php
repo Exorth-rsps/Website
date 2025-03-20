@@ -8,6 +8,23 @@
   <title>Legacy - Exorth RSPS</title> 
   <style type="text/css">/*\*/@import url(css/global.css);/**/</style> 
   <style type="text/css">/*\*/@import url(css/home.css);/**/</style> 
+  <style>.btn {
+  display: inline-block;       /* Zorgt voor ‘button’-achtig uiterlijk */
+  padding: 10px 20px;          /* Ruimte rondom de tekst */
+  text-decoration: none;       /* Onderstreept de link niet meer */
+  color: #fff;                 /* Tekstkleur (wit) */
+  background-color: #007BFF;   /* Blauwe achtergrond */
+  border-radius: 4px;          /* Ronde hoekjes */
+  margin-right: 10px;          /* Ruimte tussen knoppen */
+}
+
+.btn:hover {
+  background-color: #0056b3;   /* Donkerdere kleur bij hover */
+}
+
+.button-row {
+  margin-top: 1em;             /* Eventueel wat extra ruimte boven de knoppen */
+}</style>
  </head> 
  <body id="navhome">   
 <a name="top"></a> 
@@ -42,8 +59,22 @@
        <div class="sectionBody first"> 
         <div class="News"> 
          <p>
-            Something here
-         </p> 
+         The Exorth Legacy server was originally set up as a temporary solution to entertain players while a completely new RSPS experience was under development. In our search for a suitable base that would come close to what we wanted, we found that this wasn’t so simple. We ended up with a server that was quite far off, filled with bugs and other issues. Nevertheless, time was invested to develop and make this server playable, and the decision was made to keep hosting it so that people can continue to enjoy that old RSPS feeling.
+
+          The server is and will never again be an exact copy of the original Exorth from back in the day, but we want to get as close as possible with various additions. Unfortunately, there’s hardly any information left about the original Exorth. Furthermore, support for Exorth is purely community-based. If you would like to help develop this server, please indicate this in the Legacy Team channel on Discord.
+
+          Before continuing to play, there are a few warnings:
+            <ul>
+              <li>The server is not 100% stable; an account could be lost. While a backup is made every hour, there is no guarantee!</li>
+              <li>Passwords are not hashed! So use a password exclusively for the Legacy server and nowhere else!</li>
+              <li>Unfortunately, Exorth Legacy only works on Windows.</li>
+            </ul>
+            <div class="button-row">
+  <a href="/legacy-download.php" class="btn">Download the client</a>
+  <a href="/legacy-droptable.php" class="btn">View drop tables</a>
+  <a href="legacy-guides.php" class="btn">View game guides</a>
+</div>
+                  </p> 
         </div> 
        </div>  
       </div> 
