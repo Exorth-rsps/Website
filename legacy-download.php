@@ -38,11 +38,48 @@
          </div> 
         </div> 
        </div> 
+       <style>
+          .legacy-drop {
+            display: inline-block;
+            width: 210px;
+            height: 130px;
+            background: rgba(178,147,83,0.2);
+            border-radius: 15px;
+            text-align: center;
+            vertical-align: middle;
+            margin: 10px;
+            color: #DFC89D;
+            border: 5px solid rgba(178,147,83,0.8);
+          }
+          .legacy-drop-image {
+            margin-top: 20px;
+            margin-bottom: 5px;
+          }
+          .legacy-drop-rarity {
+            background: rgba(178,147,83,0.8);
+            padding: 4px;
+            border-radius: 3px;
+            width: 75%;
+            margin: 0 auto;
+            margin-top: 5px;
+          }
+          hr {
+            border: none;           /* Verwijdert de standaard rand */
+            height: 2px;            /* Bepaalt de dikte van de lijn */
+            background-color: #4e412d;  /* Bepaalt de kleur van de lijn */
+          }
+        </style> 
       <div class="section"> 
        <div class="sectionBody first"> 
         <div class="News"> 
          <p>
-            Something here
+         <h2 style="text-align:left;margin-left:12px;">Windows</h2>			
+         <div class="legacy-drop">
+				<div class="legacy-drop-image"><img src="img/legacy-items/532.png" /></div>
+				<div class="legacy-drop-name"><b>Big Bones</b><br />
+				(1)</div>
+				<div class="legacy-drop-rarity"><span style="font-weight:bolder;">Download</span></div>
+			</div>
          </p> 
         </div> 
        </div>  
