@@ -80,45 +80,7 @@
           4%-1% = Very Rare
           !-->
          <p>
-         <h2 style="text-align:left;margin-left:12px;">TEST</h2>			
-         <div class="legacy-drop">
-				<div class="legacy-drop-image"><img src="img/legacy-items/532.png" /></div>
-				<div class="legacy-drop-name"><b>Big Bones</b><br />
-				(1)</div>
-				<div class="legacy-drop-rarity"><span style="color:green;font-weight:bolder;">Always</span></div>
-			</div>
-      <div class="legacy-drop">
-				<div class="legacy-drop-image"><img src="img/legacy-items/532.png" /></div>
-				<div class="legacy-drop-name"><b>Big Bones</b><br />
-				(1)</div>
-				<div class="legacy-drop-rarity"><span style="color:GreenYellow;font-weight:bolder;">Common</span></div>
-			</div>
-      <div class="legacy-drop">
-				<div class="legacy-drop-image"><img src="img/legacy-items/532.png" /></div>
-				<div class="legacy-drop-name"><b>Big Bones</b><br />
-				(1)</div>
-				<div class="legacy-drop-rarity"><span style="color:Yellow;font-weight:bolder;">Uncommon</span></div>
-			</div>
-      <div class="legacy-drop">
-				<div class="legacy-drop-image"><img src="img/legacy-items/532.png" /></div>
-				<div class="legacy-drop-name"><b>Big Bones</b><br />
-				(1)</div>
-				<div class="legacy-drop-rarity"><span style="color:Orange;font-weight:bolder;">Rare</span></div>
-			</div>
-      <div class="legacy-drop">
-				<div class="legacy-drop-image"><img src="img/legacy-items/532.png" /></div>
-				<div class="legacy-drop-name"><b>Big Bones</b><br />
-				(1)</div>
-				<div class="legacy-drop-rarity"><span style="color:Red;font-weight:bolder;">Very Rare</span></div>
-			</div>
-      <hr>
-      <h2 style="text-align:left;margin-left:12px;">TEST</h2>			
-         <div class="legacy-drop">
-				<div class="legacy-drop-image"><img src="img/legacy-items/532.png" /></div>
-				<div class="legacy-drop-name"><b>Big Bones</b><br />
-				(1)</div>
-				<div class="legacy-drop-rarity"><span style="color:green;font-weight:bolder;">Always</span></div>
-			</div>
+         <h2 style="text-align:left;margin-left:12px;">Comming Soon!</h2>			
          </p> 
         </div> 
        </div>  
