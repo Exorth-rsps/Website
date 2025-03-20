@@ -73,7 +73,7 @@ function stripImages($html) {
         </div> 
        </div> 
       </div> 
-     </div> 
+   
      <p>
      <iframe
             src="https://discord.com/widget?id=1224396880994107452&theme=dark"
