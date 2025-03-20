@@ -72,22 +72,24 @@
       <div class="section"> 
        <div class="sectionBody first"> 
         <div class="News"> 
+          <p>Before downloading check the <a href="legacy.php">general Legacy page</a>.<br /><b>Dont ever use a password you use twice or more, they are NOT hashed!</b>
+        </p>
          <p>
          <h2 style="text-align:left;margin-left:12px;">Windows</h2>			
          <div class="legacy-drop">
-				<div class="legacy-drop-image"><img src="https://2011.rs/services/m=forum/data/assets/windows11-logo.svg" /></div>
+				<div class="legacy-drop-image"><img src="/img/download/windows.svg" /></div>
 				<div class="legacy-drop-name"><b>Windows</b><br />
 				(1)</div>
 				<div class="legacy-drop-rarity"><a href="/ExorthLegacy_Client_v1.jar"><span style="font-weight:bolder;">Download</span></a></div>
 			</div>
       <div class="legacy-drop">
-				<div class="legacy-drop-image"><img src="img/legacy-items/532.png" /></div>
+				<div class="legacy-drop-image"><img src="/img/download/linux.svg" /></div>
 				<div class="legacy-drop-name"><b>Linux</b><br />
 				(1)</div>
 				<div class="legacy-drop-rarity"><span style="font-weight:bolder;">Not Available</span></div>
 			</div>
       <div class="legacy-drop">
-				<div class="legacy-drop-image"><img src="img/legacy-items/532.png" /></div>
+				<div class="legacy-drop-image"><img src="/img/download/apple.svg" /></div>
 				<div class="legacy-drop-name"><b>Mac</b><br />
 				(1)</div>
 				<div class="legacy-drop-rarity"><span style="font-weight:bolder;">Not Available</span></div>
