@@ -75,10 +75,22 @@
          <p>
          <h2 style="text-align:left;margin-left:12px;">Windows</h2>			
          <div class="legacy-drop">
-				<div class="legacy-drop-image"><img src="img/legacy-items/532.png" /></div>
-				<div class="legacy-drop-name"><b>Big Bones</b><br />
+				<div class="legacy-drop-image"><img src="https://2011.rs/services/m=forum/data/assets/windows11-logo.svg" /></div>
+				<div class="legacy-drop-name"><b>Windows</b><br />
 				(1)</div>
-				<div class="legacy-drop-rarity"><span style="font-weight:bolder;">Download</span></div>
+				<div class="legacy-drop-rarity"><a href="/ExorthLegacy_Client_v1.jar"><span style="font-weight:bolder;">Download</span></a></div>
+			</div>
+      <div class="legacy-drop">
+				<div class="legacy-drop-image"><img src="img/legacy-items/532.png" /></div>
+				<div class="legacy-drop-name"><b>Linux</b><br />
+				(1)</div>
+				<div class="legacy-drop-rarity"><span style="font-weight:bolder;">Not Available</span></div>
+			</div>
+      <div class="legacy-drop">
+				<div class="legacy-drop-image"><img src="img/legacy-items/532.png" /></div>
+				<div class="legacy-drop-name"><b>Mac</b><br />
+				(1)</div>
+				<div class="legacy-drop-rarity"><span style="font-weight:bolder;">Not Available</span></div>
 			</div>
          </p> 
         </div> 
