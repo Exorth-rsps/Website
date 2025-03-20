@@ -23,7 +23,11 @@
 }
 
 .button-row {
-  margin-top: 1em;             /* Eventueel wat extra ruimte boven de knoppen */
+  display: flex;
+  justify-content: center; /* Horizontaal centreren */
+  align-items: center;     /* Verticaal centreren (optioneel) */
+  gap: 10px;               /* Ruimte tussen de knoppen */
+  margin-top: 1em;         /* Ruimte boven de knoppen (optioneel) */
 }</style>
  </head> 
  <body id="navhome">   
