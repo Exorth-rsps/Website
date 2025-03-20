@@ -62,6 +62,18 @@ function stripImages($html) {
        </div> 
       </div> 
      </div> 
+     <div class="section"> 
+       <div class="feature">
+        <a href="/legacy.php" target="_blank">
+          <img src="img/main/home/feature_kbsearch_icon.jpg" alt="">
+        </a> 
+        <div class="featureTitle">Join our Legacy Server</div> 
+        <div class="featureDesc">
+         Checkout our Exorth Legacy Server! <a href="/legacy.php" target="_blank">Read more..</a>
+        </div> 
+       </div> 
+      </div> 
+     </div> 
      <p>
      <iframe
             src="https://discord.com/widget?id=1224396880994107452&theme=dark"
