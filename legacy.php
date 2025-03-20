@@ -69,10 +69,10 @@
               <li>Passwords are not hashed! So use a password exclusively for the Legacy server and nowhere else!</li>
               <li>Unfortunately, Exorth Legacy only works on Windows.</li>
             </ul>
-            <div class="button-row">
-  <a href="/legacy-download.php" class="btn" style="color: #2c2419;">>Download the client</a>
-  <a href="/legacy-droptable.php" class="btn">View drop tables</a>
-  <a href="legacy-guides.php" class="btn">View game guides</a>
+            <div class="button-row" algin="center">
+  <a href="/legacy-download.php" class="btn" style="color: #2c2419;"><b>Download the client</b></a>
+  <a href="/legacy-droptable.php" class="btn" style="color: #2c2419;"><b>View drop tables</b></a>
+  <a href="legacy-guides.php" class="btn" style="color: #2c2419;"><b>View game guides</b></a>
 </div>
                   </p> 
         </div> 
