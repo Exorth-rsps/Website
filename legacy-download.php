@@ -72,7 +72,7 @@
       <div class="section"> 
        <div class="sectionBody first"> 
         <div class="News"> 
-          <p>Before downloading check the <a href="legacy.php">general Legacy page</a>.<br /><b>Dont ever use a password you use twice or more, they are NOT hashed!</b>
+          <p style="justify-content: center; align-items: center;">Before downloading check the <a href="legacy.php">general Legacy page</a>.<br /><b>Dont ever use a password you use twice or more, they are NOT hashed!</b>
         </p>
          <p>
          <h2 style="text-align:left;margin-left:12px;">Windows</h2>			
@@ -95,6 +95,9 @@
 				<div class="legacy-drop-rarity"><span style="font-weight:bolder;">Not Available</span></div>
 			</div>
          </p> 
+         <p style="justify-content: center; align-items: center;"><b>General note/Troubleshooting:</b><br />
+         When the client first launch, it will become stuck on try to connect! <br/>Keep it that way for like 1 minute, its downloading his cache.<br />
+         After the minute restart the client and you are done with the install.</p>
         </div> 
        </div>  
       </div> 
