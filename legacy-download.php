@@ -42,7 +42,7 @@
           .legacy-drop {
             display: inline-block;
             width: 210px;
-            height: 250px;
+            height: 160px;
             background: rgba(178,147,83,0.2);
             border-radius: 15px;
             text-align: center;
