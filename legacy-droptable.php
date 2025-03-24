@@ -1533,7 +1533,7 @@
 				<div class="legacy-drop-image"><img src="img/legacy-items/6731.png" /></div>
 				<div class="legacy-drop-name"><b>Seers ring</b><br />
 				(1)</div>
-				<div class="legacy-drop-rarity"><span style="color:Rede;font-weight:bolder;">Very Rare</span></div>
+				<div class="legacy-drop-rarity"><span style="color:Red;font-weight:bolder;">Very Rare</span></div>
 			</div>
          <div class="legacy-drop">
 				<div class="legacy-drop-image"><img src="img/legacy-items/6735.png" /></div>
