@@ -7,7 +7,7 @@
           <ul>
             <li><a class="fly" href="legacy-download.php"><span>Download Legacy</span></a></li>
             <li><a class="fly" href="legacy-droptable.php"><span>Droptables</span></a></li>
-            <li><a class="fly" href="legacy-guides.php"><span>Guides</span></a></li>
+            <!-- <li><a class="fly" href="legacy-guides.php"><span>Guides</span></a></li> -->
           </ul>
         </li>
         <li class="top"><a id="discord" class="tl" href="https://discord.gg/HgAR7swYYH" target="_blank"><span class="ts">Discord</span></a></li>

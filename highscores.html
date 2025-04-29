@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Highscores</title>
+  <style>
+    body { display: flex; font-family: sans-serif; margin: 0; height: 100vh; }
+    nav {
+      width: 200px;
+      background: #f7f7f7;
+      padding: 1rem;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+      overflow-y: auto;
+    }
+    nav a {
+      display: block;
+      margin-bottom: 0.5rem;
+      text-decoration: none;
+      color: #333;
+      cursor: pointer;
+    }
+    nav a.active { font-weight: bold; color: #000; }
+    main {
+      flex: 1;
+      padding: 1rem;
+      overflow-y: auto;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 1rem;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+      text-align: left;
+    }
+    th { background: #eee; }
+  </style>
+</head>
+<body>
+  <nav id="menu">
+    <a data-mode="overall" class="active">Overall</a>
+    <a data-mode="skiller">Skiller Overall</a>
+    <hr/>
+    <!-- daarna skills -->
+  </nav>
+
+  <main>
+    <h1 id="title">Highscores (Overall)</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Username</th>
+          <th>XP</th>
+          <th>Level</th>
+          <th>Combat Lvl</th>
+        </tr>
+      </thead>
+      <tbody id="hs-body">
+        <tr><td colspan="5">Laden…</td></tr>
+      </tbody>
+    </table>
+  </main>
+
+  <script>
+    const fmt = new Intl.NumberFormat('nl-NL',{minimumFractionDigits:0,maximumFractionDigits:0});
+    const skills = [
+      'Attack','Defence','Strength','Hitpoints','Ranged','Prayer',
+      'Magic','Cooking','Woodcutting','Fletching','Fishing','Firemaking',
+      'Crafting','Smithing','Mining','Herblore','Agility','Thieving',
+      'Slayer','Farming','Runecraft','Hunter','Construction'
+    ];
+
+    const menu  = document.getElementById('menu');
+    const title = document.getElementById('title');
+    const tbody = document.getElementById('hs-body');
+
+    // voeg skill-links toe
+    skills.forEach((name,i) => {
+      const a = document.createElement('a');
+      a.textContent = name;
+      a.dataset.mode  = 'skill';
+      a.dataset.skill = i;
+      menu.appendChild(a);
+    });
+
+    let currentMode = 'overall';
+    let currentSkill = null;
+
+    menu.addEventListener('click', e => {
+      if (e.target.tagName !== 'A') return;
+      menu.querySelectorAll('a').forEach(a=>a.classList.remove('active'));
+      e.target.classList.add('active');
+
+      currentMode = e.target.dataset.mode;
+      currentSkill = currentMode === 'skill'
+        ? parseInt(e.target.dataset.skill, 10)
+        : null;
+
+      // update titel
+      if (currentMode === 'overall') {
+        title.textContent = 'Highscores (Overall)';
+      } else if (currentMode === 'skiller') {
+        title.textContent = 'Highscores (Skiller Overall)';
+      } else {
+        title.textContent = `Highscores (${skills[currentSkill]})`;
+      }
+
+      loadHighscores();
+    });
+
+    async function loadHighscores() {
+      tbody.innerHTML = '<tr><td colspan="5">Laden…</td></tr>';
+      let url = 'https://exorth.bulbasaur.nl/highscores?limit=200';
+      if (currentMode === 'skill') {
+        url = `https://exorth.bulbasaur.nl/highscores/skill/${currentSkill}?limit=200`;
+      }
+      const res  = await fetch(url);
+      const json = await res.json();
+
+      // basisfilter: privilege < 2
+      let data = json.highscores.filter(e => e.privilege < 2);
+
+      // modus‐specifieke filters
+      if (currentMode === 'skiller') {
+        data = data.filter(e => e.combatLvl === 3);
+      }
+      // overall: geen extra combat-filter
+      // skill-mode: géén combat-filter
+
+      // hernummeren en tonen
+      if (!data.length) {
+        tbody.innerHTML = `<tr><td colspan="5">Geen resultaten</td></tr>`;
+        return;
+      }
+      tbody.innerHTML = '';
+      data.forEach((e, idx) => {
+        const xpRaw = e.totalXp ?? e.xp;
+        const lvl   = e.lvl;
+        const comb  = e.combatLvl;
+        tbody.insertAdjacentHTML('beforeend', `
+          <tr>
+            <td>${idx+1}</td>
+            <td><a href="player.html?name=${e.username}">${e.username}</a></td>
+            <td>${fmt.format(xpRaw)}</td>
+            <td>${lvl}</td>
+            <td>${comb}</td>
+          </tr>
+        `);
+      });
+    }
+
+    window.addEventListener('DOMContentLoaded', loadHighscores);
+  </script>
+</body>
+</html>

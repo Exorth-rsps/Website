@@ -73,6 +73,17 @@ function stripImages($html) {
         </div> 
        </div> 
       </div> 
+      <div class="section"> 
+       <div class="feature">
+        <a href="/legacy.php" target="_blank">
+          <img src="img/main/home/feature_poll_icon.jpg" alt="">
+        </a> 
+        <div class="featureTitle">Legacy Online Player Count</div> 
+        <div class="featureDesc">
+        There are <b id="count">Connecting...</b> players online!       
+        </div> 
+       </div> 
+      </div> 
    
      <p>
      <iframe
@@ -120,5 +131,6 @@ function stripImages($html) {
     </div>
    </div> 
   </div> 
+  <script src="legacyonline1.js"></script>
  </body>
 </html>

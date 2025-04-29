@@ -72,7 +72,7 @@
       <div class="section"> 
        <div class="sectionBody first"> 
         <div class="News"> 
-          <p style="justify-content: center; align-items: center;">Before downloading check the <a href="legacy.php">general Legacy page</a>.<br /><b>Dont ever use a password you use twice or more, they are NOT hashed!</b>
+          <p style="justify-content: center; align-items: center;">Before downloading check the <a href="legacy.php">general Legacy page</a> and make sure you have <a href="https://www.techspot.com/downloads/5553-java-jdk.html" target="_blank">Java 11 (download here)</a>.
         </p>
          <p>
          <h2 style="text-align:left;margin-left:12px;">Windows</h2>			
@@ -80,8 +80,9 @@
 				<div class="legacy-drop-image"><img width="70px" height="70px" src="/img/download/windows.svg" /></div>
 				<div class="legacy-drop-name"><b>Windows</b><br />
 				(1)</div>
-				<div class="legacy-drop-rarity"><a href="/ExorthLegacy_Client_v1.jar"><span style="font-weight:bolder;">Download</span></a></div>
-			</div>
+				<!-- <div class="legacy-drop-rarity"><a href="/ExorthLegacy_Client_v1.jar"><span style="font-weight:bolder;">Download</span></a></div> -->
+        <div class="legacy-drop-rarity"><span style="font-weight:bolder;">Not Available</span></div>
+      </div>
       <div class="legacy-drop">
 				<div class="legacy-drop-image"><img width="70px" height="70px" src="/img/download/linux.svg" /></div>
 				<div class="legacy-drop-name"><b>Linux</b><br />
@@ -95,9 +96,9 @@
 				<div class="legacy-drop-rarity"><span style="font-weight:bolder;">Not Available</span></div>
 			</div>
          </p> 
-         <p style="justify-content: center; align-items: center;"><b>General note/Troubleshooting:</b><br />
+         <!-- <p style="justify-content: center; align-items: center;"><b>General note/Troubleshooting:</b><br />
          When the client first launch, it will become stuck on try to connect! <br/>Keep it that way for like 1 minute, its downloading his cache.<br />
-         After the minute restart the client and you are done with the install.</p>
+         After the minute restart the client and you are done with the install.</p> -->
         </div> 
        </div>  
       </div> 

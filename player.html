@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Speler Details</title>
+  <style>
+    body { font-family: sans-serif; margin: 2rem; }
+    .back { display: inline-block; margin-bottom: 1rem; }
+    table { border-collapse: collapse; width: 100%; max-width: 600px; }
+    th, td { border: 1px solid #ccc; padding: 0.5rem; text-align: left; }
+    th { background: #f4f4f4; }
+  </style>
+</head>
+<body>
+  <a href="highscores.html" class="back">← Terug naar highscores</a>
+  <h1 id="player-name">Laden...</h1>
+  <div id="stats"></div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get('name');
+    const title = document.getElementById('player-name');
+    const stats = document.getElementById('stats');
+
+    function render(player) {
+      title.textContent = player.username;
+      stats.innerHTML = '';
+      const tbl = document.createElement('table');
+      const header = document.createElement('tr');
+      ['Eigenschap','Waarde'].forEach(h => {
+        const th = document.createElement('th'); th.textContent = h;
+        header.appendChild(th);
+      });
+      tbl.appendChild(header);
+
+      ['username','privilege','combatLvl'].forEach(prop => {
+        if (player[prop] !== undefined) {
+          const row = document.createElement('tr');
+          row.innerHTML = `<td>${prop}</td><td>${player[prop]}</td>`;
+          tbl.appendChild(row);
+        }
+      });
+
+      const skillsHeader = document.createElement('tr');
+      skillsHeader.innerHTML = '<th colspan="2">Skills</th>';
+      tbl.appendChild(skillsHeader);
+      player.skills.forEach(sk => {
+        const row = document.createElement('tr');
+        row.innerHTML = `<td>${sk.name}</td><td>Level: ${sk.currentLevel}</td>`;
+        tbl.appendChild(row);
+      });
+
+      stats.appendChild(tbl);
+    }
+
+    function fetchOffline() {
+      console.log('Fetching offline player for', name);
+      fetch(`https://exorth.bulbasaur.nl/offline-player/${encodeURIComponent(name)}`)
+        .then(res => {
+          if (!res.ok) throw new Error('Offline endpoint returned ' + res.status);
+          return res.json();
+        })
+        .then(js => {
+          const arr = js.player;
+          if (!Array.isArray(arr) || arr.length === 0) {
+            title.textContent = 'Speler niet gevonden (offline)';
+            return;
+          }
+          render(arr[0]);
+        })
+        .catch(err => {
+          console.error('Error fetching offline player:', err);
+          title.textContent = 'Speler niet beschikbaar offline';
+        });
+    }
+
+    if (!name) {
+      title.textContent = 'Geen speler opgegeven';
+    } else {
+      // Probeer online
+      fetch(`/player/${encodeURIComponent(name)}`)
+        .then(res => res.json())
+        .then(js => {
+          const arr = js.player;
+          if (Array.isArray(arr) && arr.length > 0) {
+            render(arr[0]);
+          } else {
+            fetchOffline();
+          }
+        })
+        .catch(err => {
+          console.warn('Online speler niet beschikbaar, probeer offline', err);
+          fetchOffline();
+        });
+    }
+  </script>
+</body>
+</html>

@@ -63,20 +63,12 @@
        <div class="sectionBody first"> 
         <div class="News"> 
          <p>
-         The Exorth Legacy server was originally set up as a temporary solution to entertain players while a completely new RSPS experience was under development. In our search for a suitable base that would come close to what we wanted, we found that this wasn’t so simple. We ended up with a server that was quite far off, filled with bugs and other issues. Nevertheless, time was invested to develop and make this server playable, and the decision was made to keep hosting it so that people can continue to enjoy that old RSPS feeling.
-
-          The server is and will never again be an exact copy of the original Exorth from back in the day, but we want to get as close as possible with various additions. Unfortunately, there’s hardly any information left about the original Exorth. Furthermore, support for Exorth is purely community-based. If you would like to help develop this server, please indicate this in the Legacy Team channel on Discord.
-
-          Before continuing to play, there are a few warnings:
-            <ul>
-              <li>The server is not 100% stable; an account could be lost. While a backup is made every hour, there is no guarantee!</li>
-              <li>Passwords are not hashed! So use a password exclusively for the Legacy server and nowhere else!</li>
-              <li>Unfortunately, Exorth Legacy only works on Windows.</li>
-            </ul>
+         Common soon.
+</p>
             <div class="button-row" algin="center">
   <a href="/legacy-download.php" class="btn" style="color: #2c2419;"><b>Download the client</b></a>
   <a href="/legacy-droptable.php" class="btn" style="color: #2c2419;"><b>View drop tables</b></a>
-  <a href="legacy-guides.php" class="btn" style="color: #2c2419;"><b>View game guides</b></a>
+  <!-- <a href="legacy-guides.php" class="btn" style="color: #2c2419;"><b>View game guides</b></a> -->
 </div>
                   </p> 
         </div> 
