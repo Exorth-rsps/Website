@@ -7,6 +7,7 @@
           <ul>
             <li><a class="fly" href="legacy-download.php"><span>Download Legacy</span></a></li>
             <li><a class="fly" href="legacy-droptable.php"><span>Droptables</span></a></li>
+            <li><a class="fly" href="legacy-highscores.php"><span>Highscores</span></a></li>
             <!-- <li><a class="fly" href="legacy-guides.php"><span>Guides</span></a></li> -->
           </ul>
         </li>
