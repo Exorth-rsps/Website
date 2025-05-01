@@ -63,7 +63,8 @@
        <div class="sectionBody first"> 
         <div class="News"> 
          <p>
-         Common soon.
+         The Exorth Legacy Server is a nostalgic experience that brings back the classic Exorth gameplay. It features a unique economy and a dedicated community. Join us for an adventure like no other!<br><br>
+         Make sure you joined our <a href="https://discord.gg/HgAR7swYYH" target="_blank">Discord</a> for the latest updates and community events!<br><br>
 </p>
             <div class="button-row" algin="center">
   <a href="/legacy-download.php" class="btn" style="color: #2c2419;"><b>Download the client</b></a>

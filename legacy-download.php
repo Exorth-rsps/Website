@@ -80,25 +80,24 @@
 				<div class="legacy-drop-image"><img width="70px" height="70px" src="/img/download/windows.svg" /></div>
 				<div class="legacy-drop-name"><b>Windows</b><br />
 				(1)</div>
-				<!-- <div class="legacy-drop-rarity"><a href="/ExorthLegacy_Client_v1.jar"><span style="font-weight:bolder;">Download</span></a></div> -->
-        <div class="legacy-drop-rarity"><span style="font-weight:bolder;">Not Available</span></div>
+				<div class="legacy-drop-rarity"><a href="/Legacy_Client100.jar"><span style="font-weight:bolder;">Download (JAR)</span></a></div>
       </div>
       <div class="legacy-drop">
 				<div class="legacy-drop-image"><img width="70px" height="70px" src="/img/download/linux.svg" /></div>
 				<div class="legacy-drop-name"><b>Linux</b><br />
 				(1)</div>
-				<div class="legacy-drop-rarity"><span style="font-weight:bolder;">Not Available</span></div>
+				<div class="legacy-drop-rarity"><a href="/Legacy_Client100.jar"><span style="font-weight:bolder;">Download (JAR)</span></a></div>
 			</div>
       <div class="legacy-drop">
 				<div class="legacy-drop-image"><img width="70px" height="70px" src="/img/download/apple.svg" /></div>
 				<div class="legacy-drop-name"><b>Mac</b><br />
 				(1)</div>
-				<div class="legacy-drop-rarity"><span style="font-weight:bolder;">Not Available</span></div>
+				<div class="legacy-drop-rarity"><a href="/Legacy_Client100.jar"><span style="font-weight:bolder;">Download (JAR)</span></a></div>
 			</div>
          </p> 
-         <!-- <p style="justify-content: center; align-items: center;"><b>General note/Troubleshooting:</b><br />
-         When the client first launch, it will become stuck on try to connect! <br/>Keep it that way for like 1 minute, its downloading his cache.<br />
-         After the minute restart the client and you are done with the install.</p> -->
+         <p style="justify-content: center; align-items: center;"><b>General note/Troubleshooting:</b><br />
+         Make sure you have the right Java! You can download  <a href="https://www.techspot.com/downloads/5553-java-jdk.html" target="_blank">Java 11 here</a>!<br />
+         Mac should give a message that the app is not trusted, <a href="https://support.apple.com/guide/mac-help/mh40596/12.0/mac" target="_blank">you can follow this to fix it.</a> Dont forget to select your MacOS version!</p>
         </div> 
        </div>  
       </div> 
