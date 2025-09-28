@@ -1,8 +1,8 @@
 <?php
 $host = 'localhost';       // Database host
-$db = 'jouw_database_naam'; // Database naam
-$user = 'jouw_database_gebruiker'; // Database gebruiker
-$pass = 'jouw_database_wachtwoord'; // Database wachtwoord
+$db = 'u43361p163932_exorthblog'; // Database naam
+$user = 'u43361p163932_exorthblog'; // Database gebruiker
+$pass = 'awivgjeizsdrhnL56898!'; // Database wachtwoord
 
 $conn = new mysqli($host, $user, $pass, $db);
 

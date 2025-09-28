@@ -286,7 +286,8 @@
       let url = 'https://exorth.bulbasaur.nl/highscores?limit=200';
       if(mode==='skill') url = `https://exorth.bulbasaur.nl/highscores/skill/${skill}?limit=200`;
       const res = await fetch(url), json = await res.json();
-      let data = json.highscores.filter(e=>e.privilege<2);
+      let data = json.highscores.filter(e => e.privilege >= 0 && e.privilege < 2);
+
       if(mode==='skiller') data = data.filter(e=>e.combatLvl===3);
       if(!data.length) {
         tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;">No results</td></tr>';

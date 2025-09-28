@@ -5,10 +5,8 @@ CREATE TABLE users (
     email VARCHAR(255) NOT NULL UNIQUE,
     role ENUM('admin', 'author', 'nothing', 'banned') DEFAULT 'nothing',
     display_name VARCHAR(50),
-        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-    );
-    
-    ALTER TABLE users ADD COLUMN reset_token VARCHAR(255) DEFAULT NULL;
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
 
 CREATE TABLE blogs (
     id INT AUTO_INCREMENT PRIMARY KEY,
